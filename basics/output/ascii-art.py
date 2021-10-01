@@ -1,8 +1,8 @@
 # Display a box
-
+eyes=input()
 print("        #############")
 print("        ##########")
-print("        #  o  o  #")
+print(f"        #   {eyes} {eyes}  #")
 print("        #    L   #")
 print("        #        #")
 print("        #  _____ #")
@@ -19,3 +19,4 @@ print("        # ___|___ #")
 print("        # ___|___ #")
 print("        # ___|___ #")
 print("        |_________|   ")
+
