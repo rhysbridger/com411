@@ -1,14 +1,9 @@
-Please
-enter
-the
-activity
-to
-be
-performed.
-calculate
+activity=str(input("Please enter the activity to be performed."))
+print (activity)
+if activity == ("calculate"):
+    print("performing calculations...")
+    print()
 
-Performing
-calculations...
-
-Activity
-completed!gi
+else:
+    print("performing activity")
+print("activity completed!")
