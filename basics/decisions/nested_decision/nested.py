@@ -1,18 +1,16 @@
-# ask user what to do
-print("What should I do (play/study)?")
-activity = input()
+# ask user what the book is like
+print("What cover does this book have (soft/hard)?")
+book = input()
 
-# decide if beep should play or study
-if activity == "play":
+# decide if the book is soft or hard
+if book == "soft":
 
-    # ask user what to play with
-    print("What should I play with (toy/friend)?")
-    play_with = input()
+    # ask user is this book perfect-bound
+    print("is this book perfect-bound (yes/no)?")
+    bound = input()
 
     # decide if beep should play with toys or friend
-    if play_with == "toy":
-        print("I will play with my toys!")
-    else:
-        print("I will play with my friend!")
-else:
-    print("I will study")
+    if bound == "yes":
+        print("Soft cover, perfect bound books are very popular!")
+else :
+    print("no thank you!")
