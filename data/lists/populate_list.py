@@ -3,13 +3,16 @@ def directions():
     return directions
 
 def menu():
-    print("please select a direction:")
+    response = int(input("please select a direction:"))
     dirs = directions()
     for index in range(len(dirs)):
-        print(f"{index}: {dirs[index]}.")
+        print(f"{[index]}: {dirs[index]}.")
+        print(response)
 
 def run():
    menu()
 
+
 if __name__ == "__main__":
     run()
+
