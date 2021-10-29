@@ -3,14 +3,20 @@ def directions():
     return directions
 
 def menu():
-    response = int(input("please select a direction:"))
+    print("please select a direction:")
     dirs = directions()
     for index in range(len(dirs)):
         print(f"{[index]}: {dirs[index]}.")
-        print(response)
+    index = int(input())
+    return dirs[index]
 
 def run():
-   menu()
+    route = []
+    print("working out escape route")
+    for count in range(5):
+        route.append(menu())
+    print(f"Escape route {route}")
+
 
 
 if __name__ == "__main__":
