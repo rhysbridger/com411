@@ -1,11 +1,26 @@
-
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MultipleLocator
 
-x = [0,2,4,6,8,10]
-y = [0,20,40,60,80,100]
+fig, axs = plt.subplots(2, 2)
 
-plt.xlabel("x values")
-plt.ylabel("y values")
+x = range(0, 10, 1)
+y = range(0, 20, 2)
 
-plt.plot(x, y)
-plt.show()
+axs[0,0].plot(x, y)
+
+axs[0,0].set_xlabel('X')
+axs[0,0].set_xlim(2, 8)
+
+axs[0,0].set_ylabel('Y')
+axs[0,0].set_ylim(4, 16)
+
+axs[0,0].tick_params(which='both', width = 2)
+axs[0,0].tick_params(which='major', length = 8)
+axs[0,0].tick_params(which='minor', length = 4, color = 'r')
+
+axs[0,0].xaxis.set_minor_locator(MultipleLocator(1))
+axs[0,0].yaxis.set_minor_locator(MultipleLocator(2))
+axs[0,0].xaxis.set_major_locator(MultipleLocator(2))
+axs[0,0].yaxis.set_major_locator(MultipleLocator(4))
+
+plt.tight_layout()
