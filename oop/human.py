@@ -7,6 +7,8 @@ class Human:
     self.name = "Human"
     self.energy = Human.MAX_ENERGY
     self.age = 0
+    Human.eat += 1
+    Human.move -= 1
 
   def MAX_ENERGY(self):
     print(Human.MAX_ENERGY)
