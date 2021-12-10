@@ -17,6 +17,9 @@ class Human:
   def MAX_ENERGY(self):
       print(Human.MAX_ENERGY)
 
+  def __repr__(self):
+    return f'human(name={self.name}, age={self.age})'
+
 if (__name__ == "__main__"):
   human = Human()
   human.display()

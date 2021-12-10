@@ -1,18 +1,13 @@
 class Robot:
 
   # A class attribute
-  MAX_ENERGY = 100
-  laws = "Protect, Obey and Survive"
+  MAX_ENERGY = 10
 
-  # A static method
-  @staticmethod
-  def the_laws():
-    print(Robot.laws)
+  def __repr__(self):
+    return f'robot(name={self.name}, age={self.age})'
 
-  # a class method
-  @classmethod
-  def assemble(cls):
-    return cls("Assembled Robot")
+  def __str__(self):
+    return f'Robot {self.name} is {self.age} years old.'
 
   # An initialiser (special instance method)
   def __init__(self, name = "Robot"):
@@ -26,6 +21,11 @@ class Robot:
   def display(self):
     print(f"I am {self.name}")
 
+  def __str__(self):
+    return f'Robot {self.name} is {self.age} years old.'
+
 if (__name__ == "__main__"):
   robot = Robot()
   robot.display()
+
+
